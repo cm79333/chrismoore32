@@ -1,0 +1,948 @@
+/* =====================================================
+   RESET / GLOBAL
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111827;
+    line-height: 1.65;
+    overflow-x: hidden; /* 🔥 prevents horizontal scroll */
+}
+
+/* Layout container */
+.page-container,
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+}
+
+/* =====================================================
+   NAVIGATION (FIXED)
+===================================================== */
+
+.main-nav {
+    background: #2c3e50;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* 🔥 FIX: allows wrapping */
+    gap: 10px;
+    padding: 0 10px;
+}
+
+.main-nav li {
+    display: inline;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.main-nav a:hover {
+    background: #1abc9c;
+}
+
+.main-nav .active {
+    background: #1abc9c;
+}
+
+/* =====================================================
+   HOME PAGE IMPROVED
+===================================================== */
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #374151;
+    font-size: 1.1rem;
+}
+
+/* BUTTON already styled earlier */
+
+/* QUOTE */
+.quote-section {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 700px;
+}
+
+.quote {
+    font-style: italic;
+    color: #555;
+}
+
+.quote-author {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* ABOUT */
+.about-home {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.about-home p {
+    margin-top: 15px;
+    color: #374151;
+}
+
+/* =====================================================
+   ABOUT PAGE IMPROVED
+===================================================== */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 60px auto;
+}
+
+/* IMAGE */
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #2c3e50;
+}
+
+/* TEXT */
+.about-text h1 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* =========================================
+   MOBILE FIX
+========================================= */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+/* =====================================================
+   TOC (PORTFOLIO INDEX) - MODERN GRID
+===================================================== */
+
+.toc-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.toc-card {
+    display: block;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #111827;
+    transition: 0.25s ease;
+    border-left: 5px solid #2c3e50;
+}
+
+.toc-card:hover {
+    transform: translateY(-5px);
+    background: #e8e8e8;
+}
+
+.toc-card h3 {
+    margin-bottom: 8px;
+}
+
+.toc-card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* =====================================================
+   PROJECTS / MEDIA
+===================================================== */
+
+.project-gallery,
+.video-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.project-image img,
+.video-container iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* =====================================================
+   EDUCATION + ACHIEVEMENTS (SAFE WIDTHS)
+===================================================== */
+
+.education-intro,
+.education-goals,
+.achievements-intro,
+.degree-section,
+.certification-section,
+.professional-growth {
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.achievement-card {
+    background: #f4f4f4;
+    padding: 20px;
+    margin: 20px auto;
+    border-left: 6px solid #2c3e50;
+    border-radius: 5px;
+    max-width: 700px;
+    text-align: left;
+}
+
+/* =========================================
+   EDUCATION PLAN PAGE UPGRADE
+========================================= */
+
+/* Section spacing */
+.plan-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+/* Headings */
+.plan-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Intro paragraphs */
+.plan-section p {
+    text-align: center;
+    max-width: 800px;
+    margin: 10px auto;
+    color: #374151;
+}
+
+/* Course plan layout */
+.plan-table {
+    margin-top: 30px;
+}
+
+/* Semester rows */
+.plan-table .semester {
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    color: #2c3e50;
+}
+
+/* Course list */
+.plan-table .courses {
+    text-align: left;
+    padding: 15px;
+}
+
+/* Make rows look like cards */
+.plan-row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    background: #f4f4f4;
+    margin: 15px 0;
+    border-radius: 8px;
+    border-left: 5px solid #2c3e50;
+}
+
+/* Course spacing */
+.plan-row p {
+    margin: 5px 0;
+}
+
+/* Future goals section */
+.future-goals {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* =========================================
+   EVALUATION PAGE STYLING
+========================================= */
+
+.evaluation-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.evaluation-text {
+    max-width: 700px;
+    margin: 10px auto;
+    color: #374151;
+}
+
+/* FORM */
+.review-section {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 25px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    border-left: 5px solid #2c3e50;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.review-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.review-form button {
+    background: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.review-form button:hover {
+    background: #16a085;
+}
+
+/* REVIEWS SECTION */
+.reviews-section {
+    text-align: center;
+}
+
+.reviews-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.no-reviews {
+    color: #6b7280;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .review-section {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   REFLECTION PAGE UPGRADE
+========================================= */
+
+.reflection-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.reflection-header p {
+    max-width: 700px;
+    margin: 10px auto;
+    color: #374151;
+}
+
+/* GRID LAYOUT */
+.reflection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* CARD STYLE */
+.reflection-card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #2c3e50;
+}
+
+.reflection-card h2 {
+    margin-bottom: 10px;
+}
+
+.reflection-card p {
+    color: #374151;
+}
+
+/* LIST */
+.reflection-card ul {
+    padding-left: 20px;
+}
+
+.reflection-card li {
+    margin-bottom: 8px;
+}
+
+/* FULL WIDTH CARD */
+.full-width {
+    grid-column: span 2;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .reflection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+}
+
+/* =========================================
+   MOBILE FIX
+========================================= */
+@media (max-width: 768px) {
+
+    .plan-row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .plan-table .semester {
+        text-align: center;
+    }
+
+    .plan-table .courses {
+        text-align: center;
+    }
+
+}
+
+/* =====================================================
+   COURSES PAGE FIX
+===================================================== */
+
+/* Container spacing */
+.toc-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Page title */
+.toc-container h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.toc-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #374151;
+}
+
+/* Each course block */
+.toc-item {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    border-left: 5px solid #2c3e50;
+    text-align: center;
+}
+
+/* Semester titles */
+.toc-item h3:first-child {
+    margin-bottom: 10px;
+}
+
+/* Links */
+.toc-item a {
+    text-decoration: none;
+    color: #1a56db;
+}
+
+.toc-item a:hover {
+    text-decoration: underline;
+}
+
+/* Paragraph spacing */
+.toc-item p {
+    margin: 10px 0 15px;
+    color: #374151;
+}
+
+/* =====================================================
+   VIDEO FIX (IMPORTANT)
+===================================================== */
+
+.video-row {
+    display: flex;
+    justify-content: center;   /* centers videos */
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.video-row iframe {
+    width: 420px;
+    max-width: 100%;
+    height: 240px;
+    border-radius: 10px;
+}
+
+/* =====================================================
+   IMAGE PROJECTS
+===================================================== */
+
+.project-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.project-image {
+    text-align: center;
+}
+
+.project-image img {
+    width: 260px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.image-caption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+/* =====================================================
+   DOWNLOAD BUTTONS
+===================================================== */
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.download-btn {
+    background: #1abc9c;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background: #16a085;
+}
+
+/* =====================================================
+   MOBILE FIX
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .toc-container {
+        padding: 20px 15px;
+    }
+
+    .video-row iframe {
+        width: 100%;
+        height: 220px;
+    }
+
+    .project-image img {
+        width: 100%;
+    }
+
+}
+
+/* =====================================================
+   RESUME HEADER (IMPROVED)
+===================================================== */
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.resume-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.resume-title {
+    font-size: 1.2rem;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.resume-contact {
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+/* subtle divider line */
+.resume-header::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: #1abc9c;
+    margin: 20px auto 0;
+}
+
+/* =====================================================
+   CONTACT PAGE (IMPROVED)
+===================================================== */
+
+.contact-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-intro {
+    color: #374151;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Card layout */
+.contact-card {
+    max-width: 500px;
+    margin: auto;
+    background: #f4f4f4;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    border-left: 5px solid #2c3e50;
+}
+
+/* spacing inside card */
+.contact-card p {
+    margin-bottom: 12px;
+}
+
+/* link styling */
+.contact-card a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   TABLE FIX (important for mobile)
+===================================================== */
+
+.education-plan table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.education-plan th,
+.education-plan td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    border-top: 2px solid #111827;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 26px;
+    background-color: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+.btn:hover {
+    background-color: #1abc9c;
+}
+
+/* =====================================================
+   DOWNLOAD BUTTONS
+===================================================== */
+
+.download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;              /* 🔥 spacing between buttons */
+    margin-top: 20px;
+    flex-wrap: wrap;        /* mobile friendly */
+}
+
+.download-btn {
+    padding: 12px 24px;
+    background-color: #111827;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+.download-btn:hover {
+    background-color: #1abc9c;
+}
+
+/* optional second button style */
+.secondary-btn {
+    background-color: #374151;
+}
+
+/* =====================================================
+   RESPONSIVE (MAIN FIX)
+===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Stack layouts */
+    .about-layout,
+    .project-gallery,
+    .video-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Navbar stacks cleanly */
+    .main-nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Reduce text size slightly */
+    body {
+        font-size: 14px;
+    }
+
+    /* Prevent content from touching edges */
+    .content,
+    .page-container {
+        padding: 20px 15px;
+    }
+}
+
+.evaluation-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #1abc9c;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1abc9c;
+}
+
+.review-box {
+    background: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.card-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-container input,
+.card-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.card-container button {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.review-container,
+.card-container {
+    background: #f5f5f5;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid #374151;
+}
+
+.review-section {
+    max-width: 600px;
+    margin: auto;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-form input,
+.review-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.review-form button {
+    background: #2bb392;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ⭐ Star Rating Styling */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star-rating input:checked ~ label {
+    color: gold;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: gold;
+}

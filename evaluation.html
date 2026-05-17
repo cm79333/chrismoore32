@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Evaluation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+<nav class="main-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About Me</a></li>
+<li><a href="toc.html">Portfolio Index</a></li>
+<li><a href="courses.html">Course Descriptions</a></li>
+<li><a href="education-plan.html">Education Plan</a></li>
+<li><a href="achievements.html">Degrees & Awards</a></li>
+<li><a href="evaluation.html" class="active">Evaluation</a></li>
+<li><a href="reflection.html">Reflection</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="resume.html">Resume</a></li>
+</ul>
+</nav>
+</header>
+
+<main class="content">
+
+<!-- Evaluation -->
+<section class="evaluation-section">
+    <h1>Portfolio Evaluation</h1>
+
+    <h2>Overall Evaluation</h2>
+
+    <p class="evaluation-text">
+        This portfolio demonstrates strong web development skills, organization, and an understanding of design principles such as usability, responsiveness, and clarity.
+    </p>
+</section>
+
+<!-- Contact -->
+<div class="card-container">
+    <h2>Contact Me</h2>
+
+    <input type="text" id="emailName" placeholder="Your Name">
+    <input type="email" id="emailAddress" placeholder="Your Email">
+    <textarea id="emailMessage" placeholder="Your Message..."></textarea>
+
+    <button onclick="sendEmail()">Send Email</button>
+</div>
+
+<!-- Review Form -->
+<section class="review-section">
+    <h2>Leave a Review</h2>
+
+    <form onsubmit="submitReview(event)" class="review-form">
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="rating">Rating</label>
+        <select id="rating" required>
+            <option value="">Select a rating</option>
+            <option value="★☆☆☆☆ - Poor">★☆☆☆☆ - Poor</option>
+            <option value="★★☆☆☆ - Fair">★★☆☆☆ - Fair</option>
+            <option value="★★★☆☆ - Good">★★★☆☆ - Good</option>
+            <option value="★★★★☆ - Very Good">★★★★☆ - Very Good</option>
+            <option value="★★★★★ - Excellent">★★★★★ - Excellent</option>
+        </select>
+
+        <label for="reviewText">Your Review</label>
+        <textarea id="reviewText" placeholder="Write your review..." required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<!-- Reviews Section (BOTTOM) -->
+<section class="reviews-section">
+    <h2>Reviews</h2>
+
+    <div id="reviewsDisplay" class="reviews-container">
+        <p>No reviews yet. Be the first to leave one!</p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Christopher Moore | Web-Based Educational Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
